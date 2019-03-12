@@ -5,9 +5,9 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/kmrl-app'));
+app.use(express.static(__dirname + '/dist/kmrl-node'));
 app.get('/*', function(req,res) {
-    res.sendFile(path.join(__dirname+'/dist/kmrl-app/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/kmrl-node/index.html'));
     });
 
 // Start the app by listening on the default Heroku port
