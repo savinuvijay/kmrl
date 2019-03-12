@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('/dist/kmrl-app'));
+app.use(express.static('./dist/kmrl-app'));
 app.get('/*', function(req,res) {
     res.sendFile(path.join(__dirname+'/dist/kmrl-app/index.html'));
     });
